@@ -128,7 +128,9 @@
     .g-cat-head { display: flex; align-items: baseline; gap: 16px; margin-bottom: 24px; }
     .g-cat-head h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700; color: #fff; }
     .g-cat-head .line { flex: 1; height: 1px; background: linear-gradient(90deg, rgba(201,168,76,0.4), transparent); }
-    .g-cat-head .cat-count { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; }
+    .g-cat-head .cat-count { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; margin-right: 10px; }
+    .cat-viewall { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold-bright); text-decoration: none; white-space: nowrap; border: 1px solid rgba(201,168,76,0.35); padding: 7px 16px; border-radius: 20px; transition: all 0.2s; }
+    .cat-viewall:hover { background: rgba(201,168,76,0.12); border-color: var(--gold); }
 
     .g-grid {
       columns: 4 280px; column-gap: 14px;
@@ -245,8 +247,8 @@
   <ul class="nav-links">
     <li><a href="index.html#about">About</a></li>
     <li><a href="index.html#services">Services</a></li>
-    <!-- <li><a href="gallery.html" class="active">Gallery</a></li>
-    <li><a href="index.html#process">How We Work</a></li> -->
+    <li><a href="gallery.html" class="active">Gallery</a></li>
+    <li><a href="index.html#process">How We Work</a></li>
     <li><a href="index.html#contact">Contact</a></li>
   </ul>
   <a href="https://wa.me/918130093909?text=Hi%20The%20Party%20Rokerz!%20I%20want%20to%20book%20a%20decoration." target="_blank" class="nav-cta">📞 Book Now</a>
@@ -293,7 +295,7 @@
 
   <!-- KIDS BIRTHDAYS -->
   <div class="g-category" data-section="kids">
-    <div class="g-cat-head"><h3>Kids Birthdays</h3><div class="line"></div><span class="cat-count">8 setups</span></div>
+    <div class="g-cat-head"><h3>Kids Birthdays</h3><div class="line"></div><span class="cat-count">8 setups</span><a href="kids-birthdays.html" class="cat-viewall">View Page →</a></div>
     <div class="g-grid">
       <div class="g-item" data-cat="kids" data-name="Marvel Superhero Setup" data-tag="Kids Birthday" onclick="openLB(this)">
         <img src="images/gallery/kids-birthday-marvel-zaran-4th.jpg" alt="Marvel superhero themed 4th birthday, silver sequin backdrop" loading="lazy" />
@@ -340,7 +342,7 @@
 
   <!-- MILESTONE BIRTHDAYS -->
   <div class="g-category" data-section="adult">
-    <div class="g-cat-head"><h3>Milestone Birthdays</h3><div class="line"></div><span class="cat-count">3 setups</span></div>
+    <div class="g-cat-head"><h3>Milestone Birthdays</h3><div class="line"></div><span class="cat-count">3 setups</span><a href="milestone-birthdays.html" class="cat-viewall">View Page →</a></div>
     <div class="g-grid">
       <div class="g-item" data-cat="adult" data-name="Dirty 30 Beers & Cheers" data-tag="Milestone Birthday" onclick="openLB(this)">
         <img src="images/gallery/birthday-adult-dirty30-beers.jpg" alt="Dirty 30 beers themed black and gold 30th birthday backdrop" loading="lazy" />
@@ -362,7 +364,7 @@
 
   <!-- BABY SHOWER -->
   <div class="g-category" data-section="baby">
-    <div class="g-cat-head"><h3>Baby Shower</h3><div class="line"></div><span class="cat-count">1 setup</span></div>
+    <div class="g-cat-head"><h3>Baby Shower</h3><div class="line"></div><span class="cat-count">1 setup</span><a href="baby-shower.html" class="cat-viewall">View Page →</a></div>
     <div class="g-grid">
       <div class="g-item" data-cat="baby" data-name="Pastel Bunny Welcome Setup" data-tag="Baby Shower" onclick="openLB(this)">
         <img src="images/gallery/babyshower-baby-singhaa.jpg" alt="Pastel pink baby shower decoration with bunny and pram cutouts" loading="lazy" />
@@ -374,7 +376,7 @@
 
   <!-- WEDDING & BRIDAL -->
   <div class="g-category" data-section="wedding">
-    <div class="g-cat-head"><h3>Wedding & Bridal</h3><div class="line"></div><span class="cat-count">3 setups</span></div>
+    <div class="g-cat-head"><h3>Wedding & Bridal</h3><div class="line"></div><span class="cat-count">3 setups</span><a href="wedding-bridal.html" class="cat-viewall">View Page →</a></div>
     <div class="g-grid">
       <div class="g-item" data-cat="wedding" data-name="Rose Gold Bride-to-Be" data-tag="Bridal Shower" onclick="openLB(this)">
         <img src="images/gallery/bridal-bride-to-be.jpg" alt="Rose gold bride to be balloon arch with ring marquee light" loading="lazy" />
@@ -396,7 +398,7 @@
 
   <!-- FESTIVALS -->
   <div class="g-category" data-section="festival">
-    <div class="g-cat-head"><h3>Festivals</h3><div class="line"></div><span class="cat-count">2 setups</span></div>
+    <div class="g-cat-head"><h3>Festivals</h3><div class="line"></div><span class="cat-count">2 setups</span><a href="festivals.html" class="cat-viewall">View Page →</a></div>
     <div class="g-grid">
       <div class="g-item" data-cat="festival" data-name="Marigold Haldi Setup" data-tag="Haldi Ceremony" onclick="openLB(this)">
         <img src="images/gallery/festival-haldi-ceremony.jpg" alt="Colourful haldi ceremony setup with dreamcatchers and marigolds" loading="lazy" />
