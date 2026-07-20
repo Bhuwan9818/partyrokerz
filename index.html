@@ -301,87 +301,62 @@
     .ac-item:hover { color: var(--gold); }
     .ac-item .lbl { font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); opacity: 0.75; display: block; margin-bottom: 1px; }
 
-    /* ═══ SERVICES — MODERN BENTO GRID ═══ */
+    /* ═══ SERVICES — OCCASION GRID (CherishX-style) ═══ */
     #services { background: #080808; padding: 100px 5%; position: relative; overflow: hidden; }
     #services::before {
       content: ''; position: absolute; top: -10%; right: -8%; width: 500px; height: 500px;
       background: radial-gradient(circle, rgba(201,168,76,0.07) 0%, transparent 70%);
       pointer-events: none;
     }
-    .services-header { max-width: 1200px; margin: 0 auto 56px; display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px; position: relative; z-index: 1; }
-    .services-grid {
-      max-width: 1200px; margin: 0 auto; position: relative; z-index: 1;
-      display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 128px; gap: 18px;
-    }
-    .scard {
-      position: relative; border-radius: 16px; overflow: hidden; cursor: pointer;
-      display: block; text-decoration: none;
-      border: 1px solid rgba(255,255,255,0.08);
-      transition: border-color 0.35s, transform 0.35s, box-shadow 0.35s;
-    }
-    .scard.feature { grid-column: span 2; grid-row: span 3; }
-    .scard.tall2   { grid-column: span 2; grid-row: span 2; }
-    .scard.short2  { grid-column: span 2; grid-row: span 1; }
-    .scard.wide    { grid-column: span 4; grid-row: span 1; }
-    .scard:hover { transform: translateY(-4px); border-color: rgba(201,168,76,0.55); box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 0 1px rgba(201,168,76,0.15); }
-    .scard::after {
-      content: ''; position: absolute; inset: 0; border-radius: 16px; padding: 1px;
-      background: var(--grad-gold); opacity: 0; transition: opacity 0.35s;
-      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-      -webkit-mask-composite: xor; mask-composite: exclude; pointer-events: none;
-    }
-    .scard:hover::after { opacity: 0.65; }
-    .scard img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.7s ease, filter 0.4s; filter: saturate(0.92); }
-    .scard:hover img { transform: scale(1.08); filter: saturate(1.05); }
-    .scard-overlay {
-      position: absolute; inset: 0;
-      background: linear-gradient(to top, rgba(4,4,4,0.94) 0%, rgba(4,4,4,0.55) 42%, rgba(4,4,4,0.08) 75%);
-      display: flex; flex-direction: column; justify-content: flex-end; padding: 22px;
-      transition: background 0.3s;
-    }
-    .scard.wide .scard-overlay { flex-direction: row; align-items: center; justify-content: space-between; padding: 0 36px; background: linear-gradient(90deg, rgba(4,4,4,0.92) 0%, rgba(4,4,4,0.65) 55%, rgba(4,4,4,0.35) 100%); }
-    .scard-idx {
-      position: absolute; top: 18px; left: 20px;
-      font-family: 'Playfair Display', serif; font-size: 0.7rem; font-weight: 700;
-      color: rgba(255,255,255,0.35); letter-spacing: 0.1em;
-    }
-    .scard-icon {
-      width: 38px; height: 38px; border-radius: 10px;
-      background: rgba(201,168,76,0.12); border: 1px solid rgba(201,168,76,0.3);
-      display: flex; align-items: center; justify-content: center; font-size: 1.05rem;
-      margin-bottom: 12px; backdrop-filter: blur(6px);
-    }
-    .scard-tag { font-size: 0.58rem; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold-bright); margin-bottom: 6px; }
-    .scard-name { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; color: #fff; margin-bottom: 8px; line-height: 1.22; }
-    .scard.feature .scard-name { font-size: 1.65rem; }
-    .scard-desc { font-size: 0.78rem; color: rgba(255,255,255,0.65); line-height: 1.65; max-height: 0; overflow: hidden; opacity: 0; transition: max-height 0.4s ease, opacity 0.3s; }
-    .scard:hover .scard-desc { max-height: 90px; opacity: 1; margin-bottom: 4px; }
-    .scard-cta {
-      display: inline-flex; align-items: center; gap: 6px; margin-top: 10px;
-      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
-      color: var(--gold-bright); opacity: 0; transform: translateX(-6px); transition: opacity 0.3s, transform 0.3s;
-    }
-    .scard:hover .scard-cta { opacity: 1; transform: translateX(0); }
-    .scard-cta span { transition: transform 0.25s; display: inline-block; }
-    .scard:hover .scard-cta span { transform: translateX(4px); }
-    .scard-count {
-      position: absolute; top: 16px; right: 18px;
-      font-size: 0.62rem; font-weight: 600; letter-spacing: 0.08em; color: rgba(255,255,255,0.55);
-      background: rgba(0,0,0,0.45); border: 1px solid rgba(255,255,255,0.12);
-      padding: 4px 10px; border-radius: 20px; backdrop-filter: blur(4px);
-    }
-    .scard.wide .scard-count { position: static; }
-    .wide-left { display: flex; align-items: center; gap: 16px; }
-    .wide-icon { width: 52px; height: 52px; border-radius: 14px; background: rgba(201,168,76,0.14); border: 1px solid rgba(201,168,76,0.35); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; flex-shrink: 0; }
-    .wide-title { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700; color: #fff; margin-bottom: 3px; }
-    .wide-sub { font-size: 0.78rem; color: rgba(255,255,255,0.6); }
-    .wide-arrow {
-      width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(201,168,76,0.4);
-      display: flex; align-items: center; justify-content: center; color: var(--gold);
-      font-size: 1.1rem; flex-shrink: 0; transition: all 0.3s;
-    }
-    .scard.wide:hover .wide-arrow { background: var(--grad-gold); color: #0a0a0a; transform: rotate(45deg); }
+    .services-header { max-width: 1200px; margin: 0 auto 48px; text-align: center; position: relative; z-index: 1; }
+    .services-header .sec-head { margin: 0 auto 12px; }
+    .services-header .sec-sub { max-width: 480px; margin: 0 auto; }
 
+    .occ-row { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
+    .occ-row-big {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; margin-bottom: 44px;
+    }
+    .occ-row-small {
+      display: grid; grid-template-columns: repeat(7, 1fr); gap: 18px 16px;
+    }
+    .occ-card { text-decoration: none; display: flex; flex-direction: column; align-items: center; gap: 14px; }
+    .occ-blob {
+      position: relative; width: 100%; aspect-ratio: 1 / 1; border-radius: 32px; overflow: hidden;
+      background: linear-gradient(150deg, rgba(201,168,76,0.10) 0%, rgba(201,168,76,0.02) 100%);
+      border: 1px solid rgba(201,168,76,0.18);
+      transition: transform 0.35s, border-color 0.35s, box-shadow 0.35s;
+    }
+    .occ-row-small .occ-blob { border-radius: 24px; }
+    .occ-card:hover .occ-blob { transform: translateY(-6px); border-color: rgba(201,168,76,0.55); box-shadow: 0 18px 40px rgba(0,0,0,0.45); }
+    .occ-blob img {
+      position: absolute; inset: 10%; width: 80%; height: 80%; object-fit: cover;
+      border-radius: 22px; transition: transform 0.6s ease;
+    }
+    .occ-row-small .occ-blob img { border-radius: 16px; inset: 12%; width: 76%; height: 76%; }
+    .occ-card:hover .occ-blob img { transform: scale(1.06); }
+    .occ-doodle {
+      position: absolute; font-size: 0.95rem; opacity: 0.28; pointer-events: none; filter: grayscale(0.3);
+    }
+    .occ-row-small .occ-doodle { font-size: 0.7rem; }
+    .occ-count-badge {
+      position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.55); border: 1px solid rgba(201,168,76,0.3);
+      color: var(--gold-bright); font-size: 0.58rem; font-weight: 700; letter-spacing: 0.04em;
+      padding: 3px 8px; border-radius: 20px; backdrop-filter: blur(4px); z-index: 2;
+    }
+    .occ-label {
+      font-family: 'Playfair Display', serif; font-weight: 700; color: #fff; text-align: center;
+      font-size: 1.05rem; line-height: 1.3; transition: color 0.25s;
+    }
+    .occ-row-small .occ-label { font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 0.8rem; color: rgba(255,255,255,0.8); }
+    .occ-card:hover .occ-label { color: var(--gold-bright); }
+    .occ-whatsapp .occ-blob {
+      background: linear-gradient(150deg, rgba(37,211,102,0.14) 0%, rgba(37,211,102,0.03) 100%);
+      border-color: rgba(37,211,102,0.3);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .occ-whatsapp .occ-blob-icon { font-size: 2.2rem; }
+    .occ-row-small .occ-whatsapp .occ-blob-icon { font-size: 1.6rem; }
+    .occ-whatsapp:hover .occ-blob { border-color: rgba(37,211,102,0.6); }
 
     /* ═══ CATEGORIES DROPDOWN (desktop) ═══ */
     .nav-item-dropdown { position: relative; }
@@ -615,11 +590,8 @@
       .about-img-float { display: none; }
       .about-text-col { padding: 60px 40px; }
       .whyus-wrap { grid-template-columns: 1fr; }
-      .services-grid { grid-template-columns: repeat(2,1fr); grid-auto-rows: 200px; }
-      .scard.feature { grid-column: span 2; grid-row: span 2; }
-      .scard.tall2 { grid-column: span 2; grid-row: span 1; }
-      .scard.short2 { grid-column: span 1; grid-row: span 1; }
-      .scard.wide { grid-column: span 2; }
+      .occ-row-big { grid-template-columns: repeat(4,1fr); gap: 16px; }
+      .occ-row-small { grid-template-columns: repeat(5,1fr); }
       .test-header { grid-template-columns: 1fr; }
       .test-img-col { display: none; }
       .insta-grid { grid-template-columns: repeat(4,1fr); }
@@ -628,9 +600,8 @@
       .nav-links, .nav-cta { display: none; }
       .hamburger { display: flex; }
       .stats-inner { grid-template-columns: repeat(2,1fr); gap: 32px 0; }
-      .services-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 170px; }
-      .scard.wide .scard-overlay { flex-direction: column; align-items: flex-start; padding: 22px; gap: 12px; }
-      .wide-arrow { display: none; }
+      .occ-row-big { grid-template-columns: repeat(2,1fr); gap: 16px; }
+      .occ-row-small { grid-template-columns: repeat(3,1fr); }
       .pgrid { grid-template-columns: repeat(6,1fr); grid-auto-rows: 180px; }
       .pcard:nth-child(1) { grid-column: span 6; grid-row: span 2; }
       .pcard:nth-child(2) { grid-column: span 3; }
@@ -648,8 +619,10 @@
       .insta-grid { grid-template-columns: repeat(3,1fr); }
     }
     @media(max-width:540px){
-      .services-grid { grid-template-columns: 1fr; grid-auto-rows: 210px; }
-      .scard.feature, .scard.tall2, .scard.short2, .scard.wide { grid-column: span 1; grid-row: span 1; }
+      .occ-row-big { grid-template-columns: repeat(2,1fr); gap: 12px; }
+      .occ-row-small { grid-template-columns: repeat(3,1fr); gap: 12px 10px; }
+      .occ-label { font-size: 0.86rem; }
+      .occ-row-small .occ-label { font-size: 0.68rem; }
       .process-visual-grid{ grid-template-columns: 1fr; }
       .about-features { grid-template-columns: 1fr; }
       .pgrid { grid-template-columns: repeat(2,1fr); grid-auto-rows: 150px; }
@@ -677,6 +650,8 @@
       <a href="baby-shower.html"><span class="nav-dropdown-icon">🍼</span>Baby Shower</a>
       <a href="wedding-bridal.html"><span class="nav-dropdown-icon">💍</span>Wedding & Bridal</a>
       <a href="festivals.html"><span class="nav-dropdown-icon">🪔</span>Festivals & Haldi</a>
+      <a href="door-entrance-decor.html"><span class="nav-dropdown-icon">🚪</span>Door & Entrance Décor</a>
+      <a href="gift-hampers.html"><span class="nav-dropdown-icon">🎁</span>Gift Hampers</a>
         <div class="nav-dropdown-divider"></div>
         <a href="gallery.html" class="nav-dropdown-viewall">View Full Gallery →</a>
       </div>
@@ -704,9 +679,11 @@
     <a href="baby-shower.html" class="mob-cat-link" onclick="closeMob()">🍼 Baby Shower</a>
     <a href="wedding-bridal.html" class="mob-cat-link" onclick="closeMob()">💍 Wedding & Bridal</a>
     <a href="festivals.html" class="mob-cat-link" onclick="closeMob()">🪔 Festivals & Haldi</a>
+    <a href="door-entrance-decor.html" class="mob-cat-link" onclick="closeMob()">🚪 Door & Entrance Décor</a>
+    <a href="gift-hampers.html" class="mob-cat-link" onclick="closeMob()">🎁 Gift Hampers</a>
   </div>
-  <a href="gallery.html" onclick="closeMob()">Gallery</a>
-  <a href="#process" onclick="closeMob()">How We Work</a>
+   
+   
   <a href="#contact" onclick="closeMob()">Contact</a>
 </div>
 
@@ -879,95 +856,114 @@
 <!-- ═══ SERVICES ═══ -->
 <section id="services">
   <div class="services-header">
-    <div>
-      <span class="sec-tag fade-up">What We Specialise In</span>
-      <h2 class="sec-head fade-up">Every Occasion,<br/>Perfectly Decorated</h2>
-    </div>
-    <p class="sec-sub fade-up" style="max-width:340px;">Tap into any category to browse real setups we've delivered for clients just like you.</p>
+    <span class="sec-tag fade-up">What We Specialise In</span>
+    <h2 class="sec-head fade-up">Make Every Occasion<br/>Extra Special</h2>
+    <p class="sec-sub fade-up">Tap into any category to browse real setups we've delivered for clients just like you.</p>
   </div>
-  <div class="services-grid">
 
-    <a href="kids-birthdays.html" class="scard feature fade-up">
-      <img src="images/gallery/kids-birthday-marvel-zaran-4th.jpg" alt="Kids birthday decoration" loading="lazy" />
-      <div class="scard-count">8 Setups</div>
-      <div class="scard-overlay">
-        <div class="scard-idx">01</div>
-        <div class="scard-icon">🎈</div>
-        <div class="scard-tag">Most Popular</div>
-        <div class="scard-name">Kids Birthday Parties</div>
-        <div class="scard-desc">Superhero, football, butterfly, Mickey & more — magical themed worlds built around your child's favourite thing.</div>
-        <div class="scard-cta">Explore Setups <span>→</span></div>
-      </div>
-    </a>
-
-    <a href="milestone-birthdays.html" class="scard tall2 fade-up">
-      <img src="images/gallery/birthday-adult-gold-26th.jpg" alt="Milestone birthday decoration" loading="lazy" />
-      <div class="scard-count">3 Setups</div>
-      <div class="scard-overlay">
-        <div class="scard-idx">02</div>
-        <div class="scard-icon">🥂</div>
-        <div class="scard-tag">Milestone</div>
-        <div class="scard-name">Milestone Birthdays</div>
-        <div class="scard-desc">Dirty 30s, golden sequin walls, family celebrations — grown-up birthdays done in style.</div>
-        <div class="scard-cta">Explore Setups <span>→</span></div>
-      </div>
-    </a>
-
-    <a href="baby-shower.html" class="scard short2 fade-up">
-      <img src="images/gallery/babyshower-baby-singhaa.jpg" alt="Baby shower decoration" loading="lazy" />
-      <div class="scard-count">1 Setup</div>
-      <div class="scard-overlay">
-        <div class="scard-idx">03</div>
-        <div class="scard-icon">🍼</div>
-        <div class="scard-tag">New Arrival</div>
-        <div class="scard-name">Baby Shower</div>
-        <div class="scard-desc">Pastel balloon setups, floral crowns & welcome-baby décor for your little one's arrival.</div>
-        <div class="scard-cta">Explore Setups <span>→</span></div>
-      </div>
-    </a>
-
-    <a href="wedding-bridal.html" class="scard tall2 fade-up">
-      <img src="images/gallery/wedding-floral-sofa.jpg" alt="Wedding and bridal decoration" loading="lazy" />
-      <div class="scard-count">3 Setups</div>
-      <div class="scard-overlay">
-        <div class="scard-idx">04</div>
-        <div class="scard-icon">💍</div>
-        <div class="scard-tag">Romantic</div>
-        <div class="scard-name">Wedding & Bridal Décor</div>
-        <div class="scard-desc">Rose gold bride-to-be setups, ivory floral sofas & swings for your big day and every function around it.</div>
-        <div class="scard-cta">Explore Setups <span>→</span></div>
-      </div>
-    </a>
-
-    <a href="festivals.html" class="scard tall2 fade-up">
-      <img src="images/gallery/festival-haldi-ceremony.jpg" alt="Festival and Haldi decoration" loading="lazy" />
-      <div class="scard-count">2 Setups</div>
-      <div class="scard-overlay">
-        <div class="scard-idx">05</div>
-        <div class="scard-icon">🪔</div>
-        <div class="scard-tag">Festive</div>
-        <div class="scard-name">Festivals & Haldi</div>
-        <div class="scard-desc">Vibrant marigold Haldi setups & colourful Lohri selfie stations rooted in tradition.</div>
-        <div class="scard-cta">Explore Setups <span>→</span></div>
-      </div>
-    </a>
-
-    <a href="gallery.html" class="scard wide fade-up">
-      <img src="images/gallery/kids-birthday-brawlstars-purple.jpg" alt="Custom balloon and floral decoration" loading="lazy" style="opacity:0.35;" />
-      <div class="scard-overlay">
-        <div class="wide-left">
-          <div class="wide-icon">✨</div>
-          <div>
-            <div class="scard-tag" style="margin-bottom:4px;">Balloon Décor · Florals · Return Gifts</div>
-            <div class="wide-title">Plus Custom Add-Ons for Every Event</div>
-            <div class="wide-sub">Chrome balloon arches, fresh floral walls, curated return gifts & props — browse our full 18+ setup gallery.</div>
-          </div>
+  <div class="occ-row">
+    <div class="occ-row-big">
+      <a href="kids-birthdays.html" class="occ-card fade-up">
+        <div class="occ-blob">
+          <div class="occ-count-badge">14 Setups</div>
+          <span class="occ-doodle" style="top:8%;left:8%;">🎈</span>
+          <span class="occ-doodle" style="bottom:8%;right:10%;">🎂</span>
+          <img src="images/gallery/kids-birthday-marvel-zaran-4th.jpg" alt="Kids birthday decoration" loading="lazy" />
         </div>
-        <div class="wide-arrow">→</div>
-      </div>
-    </a>
+        <div class="occ-label">Kids Birthday</div>
+      </a>
+      <a href="baby-shower.html" class="occ-card fade-up">
+        <div class="occ-blob">
+          <div class="occ-count-badge">3 Setups</div>
+          <span class="occ-doodle" style="top:8%;right:10%;">🍼</span>
+          <span class="occ-doodle" style="bottom:8%;left:8%;">🧸</span>
+          <img src="images/gallery/babyshower-teddy-entrance-gate.jpg" alt="Baby shower decoration" loading="lazy" />
+        </div>
+        <div class="occ-label">Baby Shower</div>
+      </a>
+      <a href="milestone-birthdays.html" class="occ-card fade-up">
+        <div class="occ-blob">
+          <div class="occ-count-badge">4 Setups</div>
+          <span class="occ-doodle" style="top:8%;left:8%;">🥂</span>
+          <span class="occ-doodle" style="bottom:8%;right:10%;">✨</span>
+          <img src="images/gallery/birthday-adult-gold-26th.jpg" alt="Milestone birthday decoration" loading="lazy" />
+        </div>
+        <div class="occ-label">Milestone Birthday</div>
+      </a>
+      <a href="wedding-bridal.html" class="occ-card fade-up">
+        <div class="occ-blob">
+          <div class="occ-count-badge">5 Setups</div>
+          <span class="occ-doodle" style="top:8%;right:10%;">💍</span>
+          <span class="occ-doodle" style="bottom:8%;left:8%;">🌹</span>
+          <img src="images/gallery/wedding-proposal-heart-roses.jpg" alt="Wedding and bridal decoration" loading="lazy" />
+        </div>
+        <div class="occ-label">Wedding &amp; Bridal</div>
+      </a>
+    </div>
 
+    <div class="occ-row-small">
+      <a href="wedding-bridal.html" class="occ-card fade-up">
+        <div class="occ-blob"><img src="images/gallery/bridal-bride-to-be.jpg" alt="Bride to be decoration" loading="lazy" /></div>
+        <div class="occ-label">Bride-to-Be</div>
+      </a>
+      <a href="wedding-bridal.html" class="occ-card fade-up">
+        <div class="occ-blob"><img src="images/gallery/wedding-mehendi-stage.jpg" alt="Mehendi decoration" loading="lazy" /></div>
+        <div class="occ-label">Mehendi Decoration</div>
+      </a>
+      <a href="wedding-bridal.html" class="occ-card fade-up">
+        <div class="occ-blob"><img src="images/gallery/wedding-proposal-heart-roses.jpg" alt="Proposal setup" loading="lazy" /></div>
+        <div class="occ-label">Proposal Setup</div>
+      </a>
+      <a href="festivals.html" class="occ-card fade-up">
+        <div class="occ-blob"><img src="images/gallery/festival-haldi-ceremony.jpg" alt="Haldi decoration" loading="lazy" /></div>
+        <div class="occ-label">Haldi Decoration</div>
+      </a>
+      <a href="festivals.html" class="occ-card fade-up">
+        <div class="occ-blob"><img src="images/gallery/festival-lohri.jpg" alt="Lohri celebration decoration" loading="lazy" /></div>
+        <div class="occ-label">Lohri &amp; Festivals</div>
+      </a>
+      <a href="door-entrance-decor.html" class="occ-card fade-up">
+        <div class="occ-blob"><img src="images/gallery/door-decor-marigold-toran.jpg" alt="Door and entrance decoration" loading="lazy" /></div>
+        <div class="occ-label">Door &amp; Entrance Décor</div>
+      </a>
+      <a href="gift-hampers.html" class="occ-card fade-up">
+        <div class="occ-blob"><img src="images/gallery/gifthamper-mr-mrs-couple.jpg" alt="Gift hamper decoration" loading="lazy" /></div>
+        <div class="occ-label">Gift Hampers</div>
+      </a>
+      <a href="baby-shower.html" class="occ-card fade-up">
+        <div class="occ-blob"><img src="images/gallery/babyshower-teddy-pram.jpg" alt="Baby welcome pram decoration" loading="lazy" /></div>
+        <div class="occ-label">Baby Welcome</div>
+      </a>
+      <a href="kids-birthdays.html" class="occ-card fade-up">
+        <div class="occ-blob"><img src="images/gallery/kids-birthday-frozen-elsa-anna.jpg" alt="Frozen themed birthday decoration" loading="lazy" /></div>
+        <div class="occ-label">Frozen Theme</div>
+      </a>
+      <a href="kids-birthdays.html" class="occ-card fade-up">
+        <div class="occ-blob"><img src="images/gallery/kids-birthday-mickey-minnie-aadya-5th.jpg" alt="Mickey and Minnie themed birthday decoration" loading="lazy" /></div>
+        <div class="occ-label">Character Theme</div>
+      </a>
+      <a href="kids-birthdays.html" class="occ-card fade-up">
+        <div class="occ-blob"><img src="images/gallery/kids-birthday-flamingo-shivya-4th.jpg" alt="Flamingo themed birthday decoration" loading="lazy" /></div>
+        <div class="occ-label">Flamingo Theme</div>
+      </a>
+      <a href="kids-birthdays.html" class="occ-card fade-up">
+        <div class="occ-blob"><img src="images/gallery/kids-birthday-art-paint-amaira-9th.jpg" alt="Art and paint themed birthday decoration" loading="lazy" /></div>
+        <div class="occ-label">Art &amp; Paint Theme</div>
+      </a>
+      <a href="kids-birthdays.html" class="occ-card fade-up">
+        <div class="occ-blob"><img src="images/gallery/kids-birthday-football-yuvaan-10th.jpg" alt="Football themed birthday decoration" loading="lazy" /></div>
+        <div class="occ-label">Football Theme</div>
+      </a>
+      <a href="https://wa.me/918130093909?text=Hi%20The%20Party%20Rokerz!%20I'm%20looking%20for%20a%20decoration%20not%20listed%20on%20your%20site." target="_blank" class="occ-card occ-whatsapp fade-up">
+        <div class="occ-blob"><span class="occ-blob-icon">💬</span></div>
+        <div class="occ-label">Something Else?</div>
+      </a>
+    </div>
   </div>
+
+  <p style="text-align:center;margin-top:44px;position:relative;z-index:1;">
+    <a href="gallery.html" class="btn-outline" style="display:inline-block;">View Full Gallery — 31+ Setups →</a>
+  </p>
 </section>
 
 <!-- ═══ WHY US ═══ -->

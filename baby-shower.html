@@ -192,7 +192,7 @@
     #related { background: #050505; border-top: 1px solid rgba(201,168,76,0.1); padding: 80px 5%; }
     .related-inner { max-width: 1200px; margin: 0 auto; }
     .related-head { margin-bottom: 40px; text-align: center; }
-    .related-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
     .rcard {
       position: relative; border-radius: 12px; overflow: hidden; height: 200px; text-decoration: none;
       border: 1px solid rgba(255,255,255,0.08); transition: transform 0.3s, border-color 0.3s;
@@ -271,7 +271,7 @@
     .nav-dropdown-menu {
       position: absolute; top: calc(100% + 16px); left: 50%; transform: translateX(-50%) translateY(6px);
       background: rgba(8,8,8,0.98); border: 1px solid rgba(201,168,76,0.22); border-radius: 12px;
-      padding: 10px; min-width: 230px; opacity: 0; visibility: hidden; pointer-events: none;
+      padding: 10px; min-width: 240px; opacity: 0; visibility: hidden; pointer-events: none;
       transition: opacity 0.25s ease, transform 0.25s ease; box-shadow: 0 25px 60px rgba(0,0,0,0.6);
       backdrop-filter: blur(20px); z-index: 50;
     }
@@ -317,6 +317,8 @@
       <a href="baby-shower.html"><span class="nav-dropdown-icon">🍼</span>Baby Shower</a>
       <a href="wedding-bridal.html"><span class="nav-dropdown-icon">💍</span>Wedding & Bridal</a>
       <a href="festivals.html"><span class="nav-dropdown-icon">🪔</span>Festivals & Haldi</a>
+      <a href="door-entrance-decor.html"><span class="nav-dropdown-icon">🚪</span>Door & Entrance Décor</a>
+      <a href="gift-hampers.html"><span class="nav-dropdown-icon">🎁</span>Gift Hampers</a>
         <div class="nav-dropdown-divider"></div>
         <a href="gallery.html" class="nav-dropdown-viewall">View Full Gallery →</a>
       </div>
@@ -342,9 +344,11 @@
     <a href="baby-shower.html" class="mob-cat-link" onclick="closeMob()">🍼 Baby Shower</a>
     <a href="wedding-bridal.html" class="mob-cat-link" onclick="closeMob()">💍 Wedding & Bridal</a>
     <a href="festivals.html" class="mob-cat-link" onclick="closeMob()">🪔 Festivals & Haldi</a>
+    <a href="door-entrance-decor.html" class="mob-cat-link" onclick="closeMob()">🚪 Door & Entrance Décor</a>
+    <a href="gift-hampers.html" class="mob-cat-link" onclick="closeMob()">🎁 Gift Hampers</a>
   </div>
-  <a href="gallery.html" onclick="closeMob()">Gallery</a>
-  <a href="index.html#process" onclick="closeMob()">How We Work</a>
+   
+   
   <a href="index.html#contact" onclick="closeMob()">Contact</a>
 </div>
 
@@ -360,29 +364,36 @@
     <h1 class="sec-head">Welcoming Your Little One<br/>in the Softest Way</h1>
     <p class="sec-sub">Pastel palettes, bunny motifs and floral trims — our baby shower setups are designed to feel as gentle and joyful as the occasion itself.</p>
     <div class="c-hero-stats">
-      <div class="c-hstat"><div class="n">1</div><div class="l">Setup Shown</div></div>
+      <div class="c-hstat"><div class="n">3</div><div class="l">Setups Delivered</div></div>
       <div class="c-hstat"><div class="n">500+</div><div class="l">Total Events</div></div>
       <div class="c-hstat"><div class="n">5★</div><div class="l">Client Rating</div></div>
     </div>
   </div>
   <div class="c-hero-img">
-    <img src="images/gallery/babyshower-baby-singhaa.jpg" alt="Baby Shower decoration" />
+    <img src="images/gallery/babyshower-teddy-entrance-gate.jpg" alt="Baby Shower decoration" />
     <div class="c-hero-img-overlay"></div>
   </div>
 </section>
 
 <div id="g-body">
   <div class="g-section-head"><h3>All Baby Shower Setups</h3><div class="line"></div></div>
-
-  <div class="g-grid" style="columns:1;">
-    <div class="g-item" data-lightbox data-name="Pastel Bunny Welcome Setup" data-tag="Baby Shower" onclick="openLB(this)" style="max-width:720px;margin:0 auto;">
+  <div class="g-grid">
+    <div class="g-item" data-lightbox data-name="Pastel Bunny Welcome Setup" data-tag="Baby Singhaa" onclick="openLB(this)">
       <img src="images/gallery/babyshower-baby-singhaa.jpg" alt="Pastel Bunny Welcome Setup — Baby Singhaa" loading="lazy" />
       <div class="g-item-zoom">⤢</div>
       <div class="g-item-overlay"><div class="g-item-cat">Baby Singhaa</div><div class="g-item-name">Pastel Bunny Welcome Setup</div></div>
     </div>
-    <p style="text-align:center;max-width:560px;margin:22px auto 0;font-size:0.84rem;color:rgba(255,255,255,0.55);line-height:1.8;">Blush and grey balloon garlands with a bunny and pram cutout, fresh florals and a personalised 'Baby Singhaa' backdrop, styled outdoors under flowing drapes.</p>
+    <div class="g-item" data-lightbox data-name="Teddy Bear Welcome Gate" data-tag="Baby Welcome Entrance" onclick="openLB(this)">
+      <img src="images/gallery/babyshower-teddy-entrance-gate.jpg" alt="Teddy Bear Welcome Gate — Baby Welcome Entrance" loading="lazy" />
+      <div class="g-item-zoom">⤢</div>
+      <div class="g-item-overlay"><div class="g-item-cat">Baby Welcome Entrance</div><div class="g-item-name">Teddy Bear Welcome Gate</div></div>
+    </div>
+    <div class="g-item" data-lightbox data-name="Floral Teddy Bear Pram" data-tag="Baby Photo Prop" onclick="openLB(this)">
+      <img src="images/gallery/babyshower-teddy-pram.jpg" alt="Floral Teddy Bear Pram — Baby Photo Prop" loading="lazy" />
+      <div class="g-item-zoom">⤢</div>
+      <div class="g-item-overlay"><div class="g-item-cat">Baby Photo Prop</div><div class="g-item-name">Floral Teddy Bear Pram</div></div>
+    </div>
   </div>
-
 </div>
 
 <!-- ═══ LIGHTBOX ═══ -->
@@ -433,6 +444,20 @@
         <div class="rcard-overlay">
           <div class="rcard-icon">🪔</div>
           <div class="rcard-name">Festivals & Haldi</div>
+        </div>
+      </a>
+      <a href="door-entrance-decor.html" class="rcard">
+        <img src="images/gallery/door-decor-floral-purple-white.jpg" alt="Door & Entrance Décor" loading="lazy" />
+        <div class="rcard-overlay">
+          <div class="rcard-icon">🚪</div>
+          <div class="rcard-name">Door & Entrance Décor</div>
+        </div>
+      </a>
+      <a href="gift-hampers.html" class="rcard">
+        <img src="images/gallery/gifthamper-mr-mrs-couple.jpg" alt="Gift Hampers" loading="lazy" />
+        <div class="rcard-overlay">
+          <div class="rcard-icon">🎁</div>
+          <div class="rcard-name">Gift Hampers</div>
         </div>
       </a>
     </div>
